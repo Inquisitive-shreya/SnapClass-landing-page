@@ -101,7 +101,7 @@ h4 {
 }
 
 /* Hero Section */
-.hero {
+/* .hero {
     min-height: 90vh;
     display: flex;
     flex-direction: column;
@@ -112,6 +112,28 @@ h4 {
     background-color: #f0f4ff;
     position: relative;
     overflow: hidden;
+} */
+
+/* Replace the existing .hero rule with this */
+.hero {
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 280px 1fr 280px;
+    grid-template-rows: auto;
+    align-items: center;
+    padding: 80px 30px;
+    background-color: #f0f4ff;
+    position: relative;
+    gap: 20px;
+}
+/*claud*/
+.hero-center {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .badge {
@@ -178,7 +200,7 @@ h4 {
     font-weight: 600;
 }
 
-/* Floating Cards Simplified */
+/* Floating Cards Simplified
 .floating-card {
     position: absolute;
     width: 320px;
@@ -187,22 +209,39 @@ h4 {
     border-radius: 36px;
     border: 1px solid #e5e7eb;
     overflow: hidden;
-}
+} */
 
-.floating-card img {
+/* Replace .floating-card, .card-left, .card-right with these */
+.floating-card {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 14px;
+    border-radius: 36px;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    /* Remove position: absolute */
+}
+/* .floating-card img {
     width: 100%;
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 24px;
     background-color: #f8faff;
-}
+} */
 
+.floating-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 24px;
+    background-color: #f8faff;
+}
 .card-label {
     display: none;
 }
 
-.card-left {
+/* .card-left {
     left: 30px;
     top: 55%;
     transform: translateY(-50%);
@@ -212,8 +251,19 @@ h4 {
     right: 30px;
     top: 55%;
     transform: translateY(-50%);
+} */
+
+.card-left {
+    grid-column: 1;
+    grid-row: 1;
+    /* Remove left/top/transform */
 }
 
+.card-right {
+    grid-column: 3;
+    grid-row: 1;
+    /* Remove right/top/transform */
+}
 
 /* Integrated Logos */
 .integrated {
@@ -523,16 +573,29 @@ h4 {
 
 /* Mobile Responsiveness Improvements */
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     .navbar {
         padding: 12px 40px;
     }
 
     .hero h1 {
         font-size: 4.5rem;
+    } */
+
+    @media (max-width: 1200px) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 80px 40px;
     }
 
-    .floating-card {
+    /* .floating-card {
+        display: none;
+    } */
+
+        .floating-card {
         display: none;
     }
 

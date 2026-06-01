@@ -4,7 +4,7 @@ A modern and responsive landing page designed to showcase the features of **Snap
 
 ## 🚀 Live Demo
 
-[View Live Project](https://snap-class-landing-page-zeta.vercel.app/)
+https://snap-class-landing-page-one.vercel.app/
 
 ## 📌 About the Project
 
